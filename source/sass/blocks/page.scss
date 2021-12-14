@@ -1,0 +1,42 @@
+.page {
+  height: 100%;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.page__body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $basic-white;
+}
+
+.page__container {
+  width: 1230px;
+  margin: 0 auto;
+
+  @media (max-width: ($desktop-width + 206px)) {
+    width: 1024px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    width: $tablet-width;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 288px;
+  }
+
+  &--mobile-on {
+    @media (max-width: $mobile-width-only) {
+      display: contents;
+    }
+  }
+
+  &--mobile-off {
+    @media (min-width: $tablet-width) {
+      display: contents;
+    }
+  }
+}
