@@ -54,4 +54,12 @@
   border-radius: 5px;
   display: block;
   width: 180px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }

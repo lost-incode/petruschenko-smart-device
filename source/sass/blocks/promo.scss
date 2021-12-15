@@ -76,4 +76,12 @@
   border-radius: 5px;
   display: block;
   margin-left: 94px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
