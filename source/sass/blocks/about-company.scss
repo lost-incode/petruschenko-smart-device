@@ -1,6 +1,22 @@
 .about-company {
   padding-top: 55px;
   padding-left: 317px;
+  position: relative;
+}
+
+.about-company::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  top: 45px;
+  left: 45px;
+  width: 317px;
+  height: 320px;
+  background-image: url("../img/2005-logo.png");
 }
 
 .about-company__title {
@@ -21,6 +37,7 @@
 }
 
 .about-company__link {
+  margin-top: 38px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
