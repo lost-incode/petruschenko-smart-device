@@ -1,7 +1,10 @@
 .promo {
   max-height: max-content;
   padding-bottom: 275px;
-  // z-index: 2;
+
+  @media (max-width: ($desktop-width + 206px)) {
+    padding-bottom: 163px;
+  }
 }
 
 .promo::before {
@@ -17,6 +20,10 @@
   background-color: $promo-bg-color;
   min-height: 950px;
   z-index: -1;
+
+  @media (max-width: ($desktop-width + 206px)) {
+    min-height: 670px;
+  }
 }
 
 .promo__title {
@@ -29,6 +36,14 @@
   color: $basic-white;
   margin: 0;
   margin-bottom: 31px;
+
+  @media (max-width: ($desktop-width + 206px)) {
+    font-size: 60px;
+    line-height: 70px;
+    padding-left: 66px;
+    max-width: 320px;
+    margin-bottom: 32px;
+  }
 }
 
 .promo__subtitle {

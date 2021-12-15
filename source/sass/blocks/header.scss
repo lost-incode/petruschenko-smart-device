@@ -2,6 +2,10 @@
   background-color: transparent;
   max-height: max-content;
   padding-bottom: 275px;
+
+  @media (max-width: ($desktop-width + 206px)) {
+    padding-bottom: 116px;
+  }
 }
 
 .header__wrapper {
