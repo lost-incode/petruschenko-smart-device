@@ -1,0 +1,159 @@
+.feedback {
+  background-color: $basic-blue;
+  position: relative;
+}
+
+.feedback::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: $basic-blue;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  top: 150px;
+  left: 350px;
+  width: 511px;
+  height: 288px;
+  background-image: url("../img/paper-airplane.png");
+  z-index: 1;
+}
+
+.feedback form {
+  padding-top: 96px;
+  padding-left: 625px;
+  padding-bottom: 113px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.feedback__title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $basic-white;
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.feedback__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+  margin: 0;
+  margin-bottom: 49px;
+}
+
+
+.feedback__input-wrapper {
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.feedback__input-wrapper--input {
+  width: 47.5%;
+}
+
+.feedback__input-wrapper input,
+.feedback__input-wrapper textarea {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 14px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+}
+
+.feedback__input-wrapper--textarea {
+  width: 100%;
+}
+
+.feedback__input-wrapper textarea {
+  display: block;
+  width: 100%;
+  flex-grow: 2;
+  min-height: 154px;
+}
+
+.feedback__input-wrapper input::placeholder,
+.feedback__input-wrapper textarea::placeholder {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+}
+
+.feedback_submit-wrapper {
+  display: flex;
+  column-gap: 38px;
+  align-items: center;
+}
+
+.feedback__submit-button {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $basic-white;
+  background-color: transparent;
+  border: 1px solid $basic-white;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 14px;
+  padding-bottom: 8px;
+  width: 70%;
+}
+
+.feedback_submit-wrapper label {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-white;
+  opacity: 0.8;
+  padding-left: 32px;
+  position: relative;
+}
+
+.feedback__checkbox-wrapper input + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $basic-white;
+  box-sizing: border-box;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: 50% 50%;
+  mask-image: ("../img/stack.svg#checkbox");
+}
+
+.feedback__checkbox-wrapper input:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 10px;
+  height: 7px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("../img/stack.svg#check");
+  z-index: 2;
+}
