@@ -82,15 +82,15 @@
   background-color: $basic-blue;
   border-color: $basic-blue;
 
-  & .advantage__title {
-    color: $basic-white;
-  }
-
-  & .advantage__subtitle {
-    color: $basic-white;
-  }
-
   &::before {
     background-color: $basic-white;
   }
+}
+
+.advantage__item:hover .advantage__title {
+  color: $basic-white;
+}
+
+.advantage__item:hover .advantage__subtitle {
+  color: $basic-white;
 }
