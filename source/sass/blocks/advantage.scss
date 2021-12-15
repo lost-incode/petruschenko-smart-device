@@ -15,6 +15,49 @@
   padding: 98px 43px 49px 45px;
   border: 1px solid $svg-elements-color;
   border-left: 3px solid $basic-blue;
+  position: relative;
+}
+
+.advantage__item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: $basic-blue;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: 50% 50%;
+}
+
+.advantage__item--stopwatch::before {
+  top: 45px;
+  left: 45px;
+  width: 29px;
+  height: 35px;
+  mask-image: url("../img/stack.svg#stopwatch");
+}
+
+.advantage__item--hired::before {
+  top: 45px;
+  left: 45px;
+  width: 35px;
+  height: 35px;
+  mask-image: url("../img/stack.svg#hired");
+}
+
+.advantage__item--detective::before {
+  top: 45px;
+  left: 45px;
+  width: 36px;
+  height: 31px;
+  mask-image: url("../img/stack.svg#detective");
+}
+
+.advantage__item--tag::before {
+  top: 45px;
+  left: 45px;
+  width: 35px;
+  height: 35px;
+  mask-image: url("../img/stack.svg#tag");
 }
 
 .advantage__title {
@@ -33,4 +76,21 @@
   font-size: 16px;
   line-height: 22px;
   color: $text-color;
+}
+
+.advantage__item:hover {
+  background-color: $basic-blue;
+  border-color: $basic-blue;
+
+  & .advantage__title {
+    color: $basic-white;
+  }
+
+  & .advantage__subtitle {
+    color: $basic-white;
+  }
+
+  &::before {
+    background-color: $basic-white;
+  }
 }
