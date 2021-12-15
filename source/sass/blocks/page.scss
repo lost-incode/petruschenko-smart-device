@@ -28,6 +28,10 @@
     width: 288px;
   }
 
+  &--footer {
+    width: 1440px;
+  }
+
   &--mobile-on {
     @media (max-width: $mobile-width-only) {
       display: contents;

@@ -1,4 +1,32 @@
 .footer {
   position: sticky;
   top: 100vh;
+  padding-top: 65px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__links {
+  padding-right: 80px;
+}
+
+.footer__title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $promo-bg-color;
+}
+
+.footer__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: $promo-bg-color;
+  opacity: 0.5;
 }

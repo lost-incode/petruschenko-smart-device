@@ -1,0 +1,8 @@
+.office__phone-link {
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    color: $basic-blue;
+  }
+}

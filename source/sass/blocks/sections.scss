@@ -1,0 +1,21 @@
+.sections {
+  width: 516px;
+}
+
+.sections__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100px;
+  column-gap: 65px;
+}
+
+.sections__link {
+  text-decoration: none;
+
+  &:hover {
+    color: $basic-blue;
+  }
+}
