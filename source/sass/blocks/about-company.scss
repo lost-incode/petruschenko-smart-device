@@ -1,0 +1,39 @@
+.about-company {
+  padding-top: 55px;
+  padding-left: 317px;
+}
+
+.about-company__title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $text-color;
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.about-company__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color;
+}
+
+.about-company__link {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $basic-blue;
+  text-decoration: none;
+  padding: 12px;
+  border: 1px solid $basic-blue;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: block;
+  width: 180px;
+}

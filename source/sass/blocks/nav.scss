@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  column-gap: 38px;
+  align-items: center;
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  column-gap: 89px;
+}
+
+.nav__link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-white;
+}

@@ -1,0 +1,27 @@
+.header {
+  background-color: transparent;
+  max-height: max-content;
+  padding-bottom: 275px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 33px;
+}
+
+.header__link-call {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $basic-white;
+  text-decoration: none;
+  padding: 12px;
+  border: 1px solid $basic-white;
+  box-sizing: border-box;
+  border-radius: 5px;
+}

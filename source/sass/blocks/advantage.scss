@@ -1,0 +1,36 @@
+.advantage {
+  padding-top: 112px;
+  padding-bottom: 55px;
+}
+
+.advantage__list {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.advantage__item {
+  padding: 98px 43px 49px 45px;
+  border: 1px solid $svg-elements-color;
+  border-left: 3px solid $basic-blue;
+}
+
+.advantage__title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: $basic-blue;
+  margin-bottom: 15px;
+}
+
+.advantage__subtitle {
+  margin: 0;
+  width: 483px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color;
+}
