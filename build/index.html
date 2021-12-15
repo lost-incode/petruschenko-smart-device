@@ -112,22 +112,22 @@
         <form>
           <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
           <p class="feedback__subtitle">Мы проконсультируем Вас бесплатно</p>
-          <div class="feedback__input-wrapper feedback__input-wrapper--input">
+          <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--input">
             <label for="name" class="visually-hidden">Введите свое имя</label>
             <input type="text" id="name" name="name" placeholder="Имя" required="">
           </div>
-          <div class="feedback__input-wrapper feedback__input-wrapper--input">
-            <label for="name" class="visually-hidden">Введите свой телефон</label>
-            <input type="text" id="name" name="name" placeholder="Телефон" required="">
+          <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--input">
+            <label for="phone" class="visually-hidden">Введите свой телефон</label>
+            <input type="text" id="phone" name="phone" placeholder="Телефон" required="">
           </div>
-          <div class="feedback__input-wrapper feedback__input-wrapper--textarea">
-            <label for="name" class="visually-hidden">Напишите текст вопроса в этом поле</label>
-            <textarea id="name" name="name" placeholder="Ваш вопрос"></textarea>
+          <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--textarea">
+            <label for="question" class="visually-hidden">Напишите текст вопроса в этом поле</label>
+            <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
           </div>
 
-          <div class="feedback_submit-wrapper">
-            <button type="submit" class="feedback__submit-button">Задать вопрос</button>
-            <div class="feedback__checkbox-wrapper">
+          <div class="field-submit-wrapper field-submit-wrapper--feedback">
+            <button type="submit" class="field-submit-button field-submit-button--feedback">Задать вопрос</button>
+            <div class="field-checkbox-wrapper">
               <input type="checkbox" class="visually-hidden" name="personal-data" id="personal-data" required="">
               <label for="personal-data">Я согласен на обработку  персональных данных</label>
             </div>
@@ -135,6 +135,33 @@
         </form>
       </div>
     </section>
+
+    <div class="modal modal--close">
+      <form>
+        <h2 class="modal__title">Закажите звонок</h2>
+        <p class="modal__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <div class="modal__input-wrapper field-wrapper">
+          <label for="call-name" class="visually-hidden">Введите свое имя</label>
+          <input type="text" id="call-name" name="call-name" placeholder="Имя" required="">
+        </div>
+        <div class="modal__input-wrapper field-wrapper">
+          <label for="call-phone" class="visually-hidden">Введите свой телефон</label>
+          <input type="text" id="call-phone" name="call-phone" placeholder="Телефон" required="">
+        </div>
+        <div class="modal__input-wrapper field-wrapper">
+          <label for="call-question" class="visually-hidden">Напишите текст вопроса в этом поле</label>
+          <textarea id="call-question" name="call-question" placeholder="Ваш вопрос"></textarea>
+        </div>
+
+        <div class="field-submit-wrapper field-submit-wrapper--modal">
+          <button type="submit" class="field-submit-button field-submit-button--modal">Отправить</button>
+          <div class="field-checkbox-wrapper">
+            <input type="checkbox" class="visually-hidden" name="call-personal-data" id="call-personal-data" required="">
+            <label for="call-personal-data">Я согласен на обработку  персональных данных</label>
+          </div>
+        </div>
+      </form>
+    </div>
   </main>
 
   <footer class="footer">
