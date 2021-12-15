@@ -9,6 +9,10 @@
   padding: 0;
   display: flex;
   column-gap: 89px;
+
+  @media (max-width: $tablet-width-only) {
+    column-gap: 34px;
+  }
 }
 
 .nav__link {
@@ -16,4 +20,39 @@
   font-size: 16px;
   line-height: 18px;
   color: $basic-white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.nav__link--mail img {
+  @media (max-width: $tablet-width-only) {
+    width: 26px;
+    height: 19px;
+    object-fit: cover;
+  }
+}
+
+.nav__link--phone img {
+  @media (max-width: $tablet-width-only) {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+}
+
+.nav__link span {
+  @media (max-width: $tablet-width-only) {
+    position: fixed;
+    transform: scale(0);
+  }
 }

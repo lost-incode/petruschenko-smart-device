@@ -24,4 +24,16 @@
   border: 1px solid $basic-white;
   box-sizing: border-box;
   border-radius: 5px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
 }
