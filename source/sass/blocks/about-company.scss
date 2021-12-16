@@ -3,6 +3,10 @@
   padding-left: 317px;
   position: relative;
   padding-bottom: 96px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 0;
+  }
 }
 
 .about-company::before {
@@ -18,6 +22,10 @@
   width: 317px;
   height: 320px;
   background-image: url("../img/2005-logo.png");
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .about-company__title {

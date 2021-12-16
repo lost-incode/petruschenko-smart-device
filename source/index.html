@@ -15,7 +15,7 @@
   <header class="header">
     <div class="page__container">
       <div class="header__wrapper">
-        <a class="header__link main-link">
+        <a class="header__link header__link--nav main-link">
           <img src="img/logo.svg" alt="Логотип сайта" class="main-link__logo">
           <span>
             <span class="main-link__logo-title main-link__logo-title--white">Smart Device</span>
@@ -49,7 +49,10 @@
       <div class="page__container">
         <h1 class="promo__title">Печатные платы</h1>
         <p class="promo__subtitle">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#" class="promo__link">Получить бесплатную консультацию</a>
+        <a href="#" class="promo__link">
+          <span class="promo__link-desktop">Получить бесплатную консультацию</span>
+          <span class="promo__link-mobile">Бесплатная консультация</span>
+        </a>
       </div>
     </div>
 
@@ -171,7 +174,7 @@
   </main>
 
   <footer class="footer">
-    <div class="page__container page__container--footer">
+    <div class="page__container page__container--mobile-off">
       <div class="footer__wrapper">
         <div class="footer__links links">
           <a class="header__link main-link">
@@ -204,46 +207,58 @@
         </div>
 
         <div class="sections">
-          <h2 class="footer__title">Разделы сайта</h2>
-          <ul class="sections__list">
-            <li class="sections__item">
-              <a href="#" class="footer__text sections__link">О компании</a>
-            </li>
-            <li class="sections__item">
-              <a href="#" class="footer__text sections__link">Продукты</a>
-            </li>
-            <li class="sections__item">
-              <a href="#" class="footer__text sections__link">Производство печатных плат</a>
-            </li>
-            <li class="sections__item">
-              <a href="#" class="footer__text sections__link">Монтаж печатных плат</a>
-            </li>
-            <li class="sections__item">
-              <a href="#" class="footer__text sections__link">Комплектующие</a>
-            </li>
-            <li class="sections__item">
-              <a href="#" class="footer__text sections__link">Доставка</a>
-            </li>
-            <li class="sections__item">
-              <a href="#" class="footer__text sections__link">Контакты</a>
-            </li>
-          </ul>
+          <div class="page__container page__container--mobile-on">
+            <div class="footer__title-wrapper">
+              <h2 class="footer__title">Разделы сайта</h2>
+              <button class="footer__mobile-button footer__mobile-button--show footer__mobile-button--sections visually-hidden"><span class="visually-hidden">Развернуть список</span></button>
+            </div>
+            <ul class="sections__list">
+              <li class="sections__item">
+                <a href="#" class="footer__text sections__link">О компании</a>
+              </li>
+              <li class="sections__item">
+                <a href="#" class="footer__text sections__link">Продукты</a>
+              </li>
+              <li class="sections__item">
+                <a href="#" class="footer__text sections__link">Производство печатных плат</a>
+              </li>
+              <li class="sections__item">
+                <a href="#" class="footer__text sections__link">Монтаж печатных плат</a>
+              </li>
+              <li class="sections__item">
+                <a href="#" class="footer__text sections__link">Комплектующие</a>
+              </li>
+              <li class="sections__item">
+                <a href="#" class="footer__text sections__link">Доставка</a>
+              </li>
+              <li class="sections__item">
+                <a href="#" class="footer__text sections__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="office">
-          <h2 class="footer__title">Наш офис</h2>
-          <p class="footer__text office__address">
-            г. Мытищи, Олимпийский проспект, д.10
-          </p>
-          <a href="tel:+7(495)589-40-50" class="footer__text office__phone-link">+7 (495) 589-40-50</a>
-          <a href="tel:+7(925)003-87-67" class="footer__text office__phone-link">+7 (925) 003-87-67</a>
-          <a href="tel:+7(926)926-080-79" class="footer__text office__phone-link">+7 (926) 926-080-79</a>
+          <div class="page__container page__container--mobile-on">
+            <div class="footer__title-wrapper">
+              <h2 class="footer__title">Наш офис</h2>
+              <button class="footer__mobile-button footer__mobile-button--show footer__mobile-button--office visually-hidden"><span class="visually-hidden">Развернуть список</span></button>
+            </div>
+            <div class="office__wrapper">
+              <p class="footer__text office__address">
+                г. Мытищи, Олимпийский проспект, д.10
+              </p>
+              <a href="tel:+7(495)589-40-50" class="footer__text office__phone-link">+7 (495) 589-40-50</a>
+              <a href="tel:+7(925)003-87-67" class="footer__text office__phone-link">+7 (925) 003-87-67</a>
+              <a href="tel:+7(926)926-080-79" class="footer__text office__phone-link">+7 (926) 926-080-79</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="footer__info info">
-      <div class="page__container page__container--footer">
+      <div class="page__container">
         <div class="info__wrapper">
           <p class="footer__text info__component info__component--rights">Все права защищены</p>
           <p class="footer__text info__component">Условия конфиденциальности</p>

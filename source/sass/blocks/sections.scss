@@ -1,9 +1,15 @@
 .sections {
-  width: 516px;
+  @media (min-width: $desktop-width) {
+    width: 516px;
+  }
 
-  @media (max-width: $tablet-width-only) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     width: max-content;
     display: block;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $border-color;
   }
 }
 

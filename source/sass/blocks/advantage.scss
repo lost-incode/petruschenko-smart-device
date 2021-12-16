@@ -89,6 +89,10 @@
   @media (max-width: $tablet-width-only) {
     width: 290px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width: 70vw;
+  }
 }
 
 .advantage__item:hover {

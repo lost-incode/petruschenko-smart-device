@@ -49,6 +49,10 @@
 
 .field-submit-button--feedback {
   width: 70%;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+  }
 }
 
 .field-submit-button--modal {
@@ -77,6 +81,11 @@
   display: flex;
   column-gap: 38px;
   align-items: center;
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
 
 .field-submit-wrapper--feedback label {
