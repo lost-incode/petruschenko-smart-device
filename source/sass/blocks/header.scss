@@ -3,7 +3,7 @@
   max-height: max-content;
   padding-bottom: 275px;
 
-  @media (max-width: ($desktop-width + 206px)) {
+  @media (max-width: $tablet-width-only) {
     padding-bottom: 116px;
   }
 }

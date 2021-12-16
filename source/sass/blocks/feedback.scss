@@ -17,6 +17,10 @@
   height: 288px;
   background-image: url("../img/paper-airplane.png");
   z-index: 1;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
 }
 
 .feedback form {
@@ -26,6 +30,10 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 83px 66px 103px 66px;
+  }
 }
 
 .feedback__title {
@@ -45,8 +53,11 @@
   color: $basic-white;
   margin: 0;
   margin-bottom: 49px;
-}
 
+  @media (min-width: $tablet-width-only) {
+    width: 100%;
+  }
+}
 
 .feedback__input-wrapper {
   margin-bottom: 40px;
@@ -55,6 +66,10 @@
 
 .feedback__input-wrapper--input {
   width: 47.5%;
+
+  @media (max-width: $tablet-width-only) {
+    width: 47%;
+  }
 }
 
 .feedback__input-wrapper--textarea {
