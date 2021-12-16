@@ -5,4 +5,16 @@
 .info__wrapper {
   display: flex;
   justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.info__component {
+  width: max-content;
+}
+
+.info__component--rights {
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
 }

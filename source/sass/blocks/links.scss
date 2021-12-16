@@ -1,4 +1,11 @@
 .links {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablet-width-only) {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

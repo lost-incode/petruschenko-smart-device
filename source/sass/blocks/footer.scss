@@ -7,10 +7,18 @@
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-width-only) {
+    flex-wrap: wrap;
+  }
 }
 
 .footer__links {
   padding-right: 80px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-right: 0;
+  }
 }
 
 .footer__title {

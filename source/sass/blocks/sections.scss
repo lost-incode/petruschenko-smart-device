@@ -1,5 +1,10 @@
 .sections {
   width: 516px;
+
+  @media (max-width: $tablet-width-only) {
+    width: max-content;
+    display: block;
+  }
 }
 
 .sections__list {
@@ -10,6 +15,11 @@
   flex-wrap: wrap;
   max-height: 100px;
   column-gap: 65px;
+
+  @media (max-width: $tablet-width-only) {
+    flex-wrap: nowrap;
+    max-height: max-content;
+  }
 }
 
 .sections__link {
