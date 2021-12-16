@@ -2,6 +2,11 @@
   background-color: $promo-bg-color;
   padding-top: 93px;
   padding-bottom: 127px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 53px;
+    padding-bottom: 78px;
+  }
 }
 
 .service__title {
@@ -12,6 +17,12 @@
   color: $basic-white;
   margin: 0;
   margin-bottom: 47px;
+
+  @media (max-width: $tablet-width-only) {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
 }
 
 .service__list {
@@ -20,6 +31,11 @@
   flex-wrap: wrap;
   column-gap: 30px;
   padding: 0;
+
+  @media (max-width: $tablet-width-only) {
+    flex-direction: column;
+    row-gap: 46px;
+  }
 }
 
 .service__link {
@@ -39,6 +55,11 @@
   &:hover {
     opacity: 0.5;
   }
+
+  @media (max-width: $tablet-width-only) {
+    width: 100%;
+    min-height: 256px;
+  }
 }
 
 .service__link::before {
@@ -50,6 +71,10 @@
   background-size: contain;
   background-position: 50% 50%;
   z-index: 0;
+
+  @media (max-width: $tablet-width-only) {
+    background-size: cover;
+  }
 }
 
 .service__link::after {
