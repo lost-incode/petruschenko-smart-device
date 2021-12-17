@@ -47,15 +47,17 @@
   <main class="page__main">
     <div class="promo">
       <div class="page__container">
-        <!-- <div class="promo__wrapper"> -->
-          <img class="promo__img" src="img/promo-img@1x.png" alt="Изображение печатной платы">
-          <h1 class="promo__title">Печатные платы</h1>
-          <p class="promo__subtitle">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a href="#free-consultation" class="promo__link">
-            <span class="promo__link-desktop">Получить бесплатную консультацию</span>
-            <span class="promo__link-mobile">Бесплатная консультация</span>
-          </a>
-        <!-- </div> -->
+        <picture>
+          <source type="image/webp" srcset="img/promo-img@1x.webp 1x, img/promo-img@2x.webp 2x">
+          <!-- 1х: 705px; 2x: 1410px -->
+          <img class="promo__img" src="img/promo-img@1x.png" alt="Изображение печатной платы" width="705" height="515" loading="lazy">
+        </picture>
+        <h1 class="promo__title">Печатные платы</h1>
+        <p class="promo__subtitle">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a href="#free-consultation" class="promo__link">
+          <span class="promo__link-desktop">Получить бесплатную консультацию</span>
+          <span class="promo__link-mobile">Бесплатная консультация</span>
+        </a>
       </div>
     </div>
 
