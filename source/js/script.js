@@ -1,70 +1,123 @@
 'use strict';
 
+var body = document.querySelector('.page__body');
 var accordionBlocks = document.querySelectorAll('.accordion-block');
-var accordionButtons = document.querySelectorAll('.accordion-block__button');
-var accordionContentBlocks = document.querySelectorAll('.accordion-block__content');
 
-// При загрузке js, скрывает вкладки, которые открыты по умолчанию без js
-// и показываем кнопки
-for (var i = 0; i < accordionBlocks.length; i++) {
-  accordionButtons[i].classList.remove('visually-hidden');
-  accordionButtons[i].classList.add('footer__mobile-button--show');
-  accordionContentBlocks[i].classList.remove('active');
+if (accordionBlocks) {
+  var accordionButtons = document.querySelectorAll('.accordion-block__button');
+  var accordionContentBlocks = document.querySelectorAll('.accordion-block__content');
+
+  // При загрузке js, скрывает вкладки, которые открыты по умолчанию без js
+  // и показываем кнопки
+  for (var i = 0; i < accordionBlocks.length; i++) {
+    accordionButtons[i].classList.remove('visually-hidden');
+    accordionButtons[i].classList.add('footer__mobile-button--show');
+    accordionContentBlocks[i].classList.remove('active');
+  }
+
+  accordionButtons.forEach(function (button) {
+    button.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var currentIndex = Array.from(accordionButtons).indexOf(button);
+      // находим все активные элементы (уже развернутые вкладки аккордеона)
+      for (var j = 0; j < accordionContentBlocks.length; j++) {
+        if (j !== currentIndex && accordionContentBlocks[j].classList.contains('active')) {
+          accordionContentBlocks[j].classList.remove('active');
+          accordionButtons[j].classList.remove('footer__mobile-button--hide');
+          accordionButtons[j].classList.add('footer__mobile-button--show');
+        }
+      }
+
+      accordionContentBlocks[Array.from(accordionButtons).indexOf(button)].classList.toggle('active');
+      button.classList.toggle('footer__mobile-button--show');
+      button.classList.toggle('footer__mobile-button--hide');
+    });
+  });
 }
 
-accordionButtons.forEach(function (button) {
-  button.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    var currentIndex = Array.from(accordionButtons).indexOf(button);
-    // находим все активные элементы (уже развернутые вкладки аккордеона)
-    for (var j = 0; j < accordionContentBlocks.length; j++) {
-      if (j !== currentIndex && accordionContentBlocks[j].classList.contains('active')) {
-        accordionContentBlocks[j].classList.remove('active');
-        accordionButtons[j].classList.remove('footer__mobile-button--hide');
-        accordionButtons[j].classList.add('footer__mobile-button--show');
-      }
+// Скрипт для localStorage
+
+var modalForm = document.querySelector('.modal__wrapper form');
+if (modalForm) {
+  var modalName = modalForm.querySelector('#call-name');
+  var modalPhone = modalForm.querySelector('#call-phone');
+  var modalQuestion = modalForm.querySelector('#call-question');
+
+  var isStorageSupport = true;
+  var storageModalName = '';
+  var storageModalPhone = '';
+  var storagemodalQuestion = '';
+
+  try {
+    storageModalName = localStorage.getItem('modalName');
+    storageModalPhone = localStorage.getItem('modalPhone');
+    storagemodalQuestion = localStorage.getItem('modalQuestion');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  window.addEventListener('load', function () {
+    if (storageModalName) {
+      modalName.value = storageModalName;
     }
 
-    accordionContentBlocks[Array.from(accordionButtons).indexOf(button)].classList.toggle('active');
-    button.classList.toggle('footer__mobile-button--show');
-    button.classList.toggle('footer__mobile-button--hide');
+    if (storageModalPhone) {
+      modalPhone.value = storageModalPhone;
+    }
+
+    if (storagemodalQuestion) {
+      modalQuestion.value = storagemodalQuestion;
+    }
   });
-});
 
-// Скрипт для открытия и закрытия модального окна
+  modalForm.addEventListener('submit', function () {
+    if (isStorageSupport) {
+      localStorage.setItem('modalName', modalName.value);
+      localStorage.setItem('modalPhone', modalPhone.value);
+      localStorage.setItem('modalQuestion', modalQuestion.value);
+    }
+  });
 
-var modalLink = document.querySelector('.header__link-call');
+  // Скрипт для открытия и закрытия модального окна
 
-var modalWindow = document.querySelector('.modal');
-var modalClose = modalWindow.querySelector('.modal__button-close');
-var modalCloseWindow = modalWindow.querySelector('.modal__button-close-window');
+  var modalLink = document.querySelector('.header__link-call');
 
-modalLink.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  modalWindow.classList.remove('modal--close');
-  modalWindow.classList.add('modal--open');
-});
+  var modalWindow = document.querySelector('.modal');
+  var modalClose = modalWindow.querySelector('.modal__button-close');
+  var modalCloseWindow = modalWindow.querySelector('.modal__button-close-window');
 
-document.addEventListener('keyup', function (evt) {
-  if (evt.defaultPrevented) {
-    return;
-  }
+  document.addEventListener('keyup', function (evt) {
+    if (evt.defaultPrevented) {
+      return;
+    }
 
-  var key = evt.key;
+    var key = evt.key;
 
-  if (key === 'Escape' || key === 'Esc' || key === 27) {
+    if (key === 'Escape' || key === 'Esc' || key === 27) {
+      modalWindow.classList.remove('modal--open');
+      modalWindow.classList.add('modal--close');
+      body.classList.remove('overflow-hidden');
+    }
+  });
+
+  modalClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
     modalWindow.classList.remove('modal--open');
     modalWindow.classList.add('modal--close');
-  }
-});
+    body.classList.remove('overflow-hidden');
+  });
 
-modalClose.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  modalWindow.classList.remove('modal--open');
-  modalWindow.classList.add('modal--close');
-});
+  modalCloseWindow.addEventListener('click', function () {
+    modalWindow.classList.remove('modal--open');
+    modalWindow.classList.add('modal--close');
+    body.classList.remove('overflow-hidden');
+  });
 
-modalCloseWindow.addEventListener('click', function () {
-  modalWindow.classList.remove('modal--open');
-  modalWindow.classList.add('modal--close');
-});
+  modalLink.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalWindow.classList.remove('modal--close');
+    modalWindow.classList.add('modal--open');
+    modalName.focus();
+    body.classList.add('overflow-hidden');
+  });
+}
