@@ -15,8 +15,12 @@
   left: 350px;
   width: 511px;
   height: 288px;
-  background-image: url("../img/paper-airplane.png");
+  background-image: url("../img/paper-airplane@1x.png");
   z-index: 1;
+
+  @supports (background-image: url("../img/paper-airplane@1x.webp")) {
+    background-image: url("../img/paper-airplane@1x.webp");
+  }
 
   @media (max-width: ($tablet-width-only + 896px)) {
     display: none;

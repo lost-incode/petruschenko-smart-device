@@ -21,7 +21,11 @@
   left: 45px;
   width: 317px;
   height: 320px;
-  background-image: url("../img/2005-logo.png");
+  background-image: url("../img/2005-logo@1x.png");
+
+  @supports (background-image: url("../img/2005-logo@1x.webp")) {
+    background-image: url("../img/2005-logo@1x.webp");
+  }
 
   @media (max-width: $mobile-width-only) {
     display: none;

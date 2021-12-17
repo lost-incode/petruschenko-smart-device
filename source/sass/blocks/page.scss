@@ -4,6 +4,7 @@
   font-size: 17px;
   line-height: 20px;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 .page__body {
@@ -11,19 +12,13 @@
   margin: 0 auto;
   padding: 0;
   background-color: $basic-white;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .page__container {
-  width: 1230px;
+  width: 93vw;
   margin: 0 auto;
-
-  @media (max-width: ($desktop-width + 206px)) {
-    width: 1024px;
-  }
-
-  @media (max-width: $tablet-width-only) {
-    width: 93vw;
-  }
 
   &--mobile-on {
     @media (min-width: $tablet-width) {
