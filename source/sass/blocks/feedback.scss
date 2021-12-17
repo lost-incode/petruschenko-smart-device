@@ -18,7 +18,7 @@
   background-image: url("../img/paper-airplane.png");
   z-index: 1;
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: ($tablet-width-only + 896px)) {
     display: none;
   }
 }
@@ -31,7 +31,7 @@
   flex-wrap: wrap;
   column-gap: 30px;
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: ($tablet-width-only + 896px)) {
     padding: 83px 66px 103px 66px;
   }
 

@@ -17,7 +17,7 @@
   left: 25%;
   text-transform: uppercase;
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: ($tablet-width-only + 896px)) {
     position: relative;
     left: 0;
   }

@@ -23,9 +23,11 @@
 
 .footer__links {
   padding-right: 80px;
+  width: max-content;
 
   @media (max-width: $tablet-width-only) {
     padding-right: 0;
+    width: 100%;
   }
 
   @media (max-width: $mobile-width-only) {

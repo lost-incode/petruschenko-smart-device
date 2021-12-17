@@ -35,10 +35,10 @@
   flex-wrap: wrap;
   column-gap: 30px;
   padding: 0;
+  row-gap: 46px;
 
   @media (max-width: $tablet-width-only) {
     flex-direction: column;
-    row-gap: 46px;
   }
 
   @media (max-width: $mobile-width-only) {
