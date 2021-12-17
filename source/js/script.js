@@ -30,3 +30,41 @@ accordionButtons.forEach(function (button) {
     button.classList.toggle('footer__mobile-button--hide');
   });
 });
+
+// Скрипт для открытия и закрытия модального окна
+
+var modalLink = document.querySelector('.header__link-call');
+
+var modalWindow = document.querySelector('.modal');
+var modalClose = modalWindow.querySelector('.modal__button-close');
+var modalCloseWindow = modalWindow.querySelector('.modal__button-close-window');
+
+modalLink.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  modalWindow.classList.remove('modal--close');
+  modalWindow.classList.add('modal--open');
+});
+
+document.addEventListener('keyup', function (evt) {
+  if (evt.defaultPrevented) {
+    return;
+  }
+
+  var key = evt.key;
+
+  if (key === 'Escape' || key === 'Esc' || key === 27) {
+    modalWindow.classList.remove('modal--open');
+    modalWindow.classList.add('modal--close');
+  }
+});
+
+modalClose.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  modalWindow.classList.remove('modal--open');
+  modalWindow.classList.add('modal--close');
+});
+
+modalCloseWindow.addEventListener('click', function () {
+  modalWindow.classList.remove('modal--open');
+  modalWindow.classList.add('modal--close');
+});

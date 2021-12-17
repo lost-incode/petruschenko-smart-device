@@ -49,7 +49,7 @@
       <div class="page__container">
         <h1 class="promo__title">Печатные платы</h1>
         <p class="promo__subtitle">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#" class="promo__link">
+        <a href="#free-consultation" class="promo__link">
           <span class="promo__link-desktop">Получить бесплатную консультацию</span>
           <span class="promo__link-mobile">Бесплатная консультация</span>
         </a>
@@ -116,6 +116,7 @@
       </div>
     </section>
 
+    <a name="free-consultation"></a>
     <section class="feedback">
       <div class="page__container">
         <form>
@@ -146,30 +147,35 @@
     </section>
 
     <div class="modal modal--close">
-      <form>
-        <h2 class="modal__title">Закажите звонок</h2>
-        <p class="modal__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <div class="modal__input-wrapper field-wrapper">
-          <label for="call-name" class="visually-hidden">Введите свое имя</label>
-          <input type="text" id="call-name" name="call-name" placeholder="Имя" required>
-        </div>
-        <div class="modal__input-wrapper field-wrapper">
-          <label for="call-phone" class="visually-hidden">Введите свой телефон</label>
-          <input type="text" id="call-phone" name="call-phone" placeholder="Телефон" required>
-        </div>
-        <div class="modal__input-wrapper field-wrapper">
-          <label for="call-question" class="visually-hidden">Напишите текст вопроса в этом поле</label>
-          <textarea id="call-question" name="call-question" placeholder="Ваш вопрос"></textarea>
-        </div>
-
-        <div class="field-submit-wrapper field-submit-wrapper--modal">
-          <button type="submit" class="field-submit-button field-submit-button--modal">Отправить</button>
-          <div class="field-checkbox-wrapper">
-            <input type="checkbox" class="visually-hidden" name="call-personal-data" id="call-personal-data" required>
-            <label for="call-personal-data">Я согласен на обработку  персональных данных</label>
+      <!-- Кнопка для закрытия по нажатию на фон за модалкой -->
+      <button class="modal__button-close-window"><span class="visually-hidden">Закрыть модальное окно</span></button>
+      <div class="modal__wrapper modal__wrapper--window">
+        <form>
+          <button class="modal__button-close"><span class="visually-hidden">Закрыть модальное окно</span></button>
+          <h2 class="modal__title">Закажите звонок</h2>
+          <p class="modal__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <div class="modal__input-wrapper field-wrapper">
+            <label for="call-name" class="visually-hidden">Введите свое имя</label>
+            <input type="text" id="call-name" name="call-name" placeholder="Имя" required>
           </div>
-        </div>
-      </form>
+          <div class="modal__input-wrapper field-wrapper">
+            <label for="call-phone" class="visually-hidden">Введите свой телефон</label>
+            <input type="text" id="call-phone" name="call-phone" placeholder="Телефон" required>
+          </div>
+          <div class="modal__input-wrapper field-wrapper">
+            <label for="call-question" class="visually-hidden">Напишите текст вопроса в этом поле</label>
+            <textarea id="call-question" name="call-question" placeholder="Ваш вопрос"></textarea>
+          </div>
+
+          <div class="field-submit-wrapper field-submit-wrapper--modal">
+            <button type="submit" class="field-submit-button field-submit-button--modal">Отправить</button>
+            <div class="field-checkbox-wrapper">
+              <input type="checkbox" class="visually-hidden" name="call-personal-data" id="call-personal-data" required>
+              <label for="call-personal-data">Я согласен на обработку  персональных данных</label>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </main>
 
