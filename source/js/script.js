@@ -1,37 +1,32 @@
 'use strict';
 
-// var mobileAccordeonButtonSection = document.querySelector('.footer__mobile-button--sections');
-// var mobileAccordeonButtonOffice = document.querySelector('.footer__mobile-button--office');
-// var sectionsList = document.querySelector('.sections__list');
-// var officeWrapper = document.querySelector('.office__wrapper');
+var accordionBlocks = document.querySelectorAll('.accordion-block');
+var accordionButtons = document.querySelectorAll('.accordion-block__button');
+var accordionContentBlocks = document.querySelectorAll('.accordion-block__content');
 
-// var mobileAccordeonButtons = document.querySelector('.footer__mobile-button');
+// При загрузке js, скрывает вкладки, которые открыты по умолчанию без js
+// и показываем кнопки
+for (var i = 0; i < accordionBlocks.length; i++) {
+  accordionButtons[i].classList.remove('visually-hidden');
+  accordionButtons[i].classList.add('footer__mobile-button--show');
+  accordionContentBlocks[i].classList.remove('active');
+}
 
-// for (var button in mobileAccordeonButtons) {
-//   button.classList.remove('visually-hidden');
-//   sectionsList.classList.add('disabled');
-//   officeWrapper.classList.add('disabled');
-//   console.log("fffff");
-// };
+accordionButtons.forEach(function (button) {
+  button.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    var currentIndex = Array.from(accordionButtons).indexOf(button);
+    // находим все активные элементы (уже развернутые вкладки аккордеона)
+    for (var j = 0; j < accordionContentBlocks.length; j++) {
+      if (j !== currentIndex && accordionContentBlocks[j].classList.contains('active')) {
+        accordionContentBlocks[j].classList.remove('active');
+        accordionButtons[j].classList.remove('footer__mobile-button--hide');
+        accordionButtons[j].classList.add('footer__mobile-button--show');
+      }
+    }
 
-// mobileAccordeonButtonSection.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   mobileAccordeonButtonSection.classList.toggle('footer__mobile-button--hide');
-//   sectionsList.classList.toggle(('active'));
-//   if (officeWrapper.classList.contains('active')) {
-//     officeWrapper.classList.remove(('active'));
-//     officeWrapper.classList.add(('disabled'));
-//     mobileAccordeonButtonOffice.classList.toggle('footer__mobile-button--hide');
-//   }
-// });
-
-// mobileAccordeonButtonOffice.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   mobileAccordeonButtonOffice.classList.toggle('footer__mobile-button--hide');
-//   officeWrapper.classList.toggle(('active'));
-//   if (sectionsList.classList.contains('active')) {
-//     sectionsList.classList.remove(('active'));
-//     sectionsList.classList.add(('disabled'));
-//     mobileAccordeonButtonSection.classList.toggle('footer__mobile-button--hide');
-//   }
-// });
+    accordionContentBlocks[Array.from(accordionButtons).indexOf(button)].classList.toggle('active');
+    button.classList.toggle('footer__mobile-button--show');
+    button.classList.toggle('footer__mobile-button--hide');
+  });
+});

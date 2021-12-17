@@ -1,0 +1,9 @@
+.accordion-block__content {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.active {
+  display: block;
+}
