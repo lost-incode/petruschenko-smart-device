@@ -35,4 +35,10 @@
       display: contents;
     }
   }
+
+  &--desktop {
+    @media (min-width: $desktop-width) {
+      width: 62vw;
+    }
+  }
 }
