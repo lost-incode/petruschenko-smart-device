@@ -35,6 +35,59 @@ if (accordionBlocks) {
   });
 }
 
+// Функция для создания маски для поля ввода телефона
+
+var MASK = '+7(000)000-00-00';
+
+function maskInput(inputName, mask, evt) {
+  try {
+    var value = inputName.value;
+    // If user pressed DEL or BACK SPACE, clean the value
+    try {
+      var e = (evt.which) ? evt.which : evt.keyCode;
+      if ((e === 46) || (e === 8)) {
+        inputName.value = '';
+        return;
+      }
+    } catch (e1) {
+      // Здесь будет сообщение об ошибке
+    }
+
+    var literalPattern = /[0\*]/;
+    var numberPattern = /[0-9]/;
+    var newValue = '';
+
+    for (var vId = 0, mId = 0; mId < mask.length;) {
+      if (mId >= value.length) {
+        break;
+      }
+      // Number expected but got a different value, store only the valid portion
+      if (mask[mId] === '0' && value[vId].match(numberPattern) === null) {
+        break;
+      }
+      // Found a literal
+      while (mask[mId].match(literalPattern) === null) {
+        if (value[vId] === mask[mId]) {
+          break;
+        }
+        newValue += mask[mId++];
+      }
+      newValue += value[vId++];
+      mId++;
+    }
+    inputName.value = newValue;
+  } catch (e2) {
+    // Здесь будет сообщение об ошибке
+  }
+}
+
+// Созданиу маски для поля ввода телефона в секции feedback
+var phoneInputFeedback = document.querySelector('#phone');
+
+phoneInputFeedback.addEventListener('input', function (evt) {
+  maskInput(phoneInputFeedback, MASK, evt);
+});
+
 // Скрипт для localStorage
 
 var modalForm = document.querySelector('.modal__wrapper form');
@@ -120,53 +173,8 @@ if (modalForm) {
     modalName.focus();
     body.classList.add('overflow-hidden');
   });
+
+  modalPhone.addEventListener('input', function (evt) {
+    maskInput(modalPhone, MASK, evt);
+  });
 }
-
-// Валидация поля телефон
-
-function maskInput(inputName, mask, evt) {
-  try {
-    var value = inputName.value;
-    // If user pressed DEL or BACK SPACE, clean the value
-    try {
-      var e = (evt.which) ? evt.which : evt.keyCode;
-      if ((e === 46) || (e === 8)) {
-        inputName.value = '';
-        return;
-      }
-    } catch (e1) {
-      // Здесь будет сообщение об ошибке
-    }
-
-    var literalPattern = /[0\*]/;
-    var numberPattern = /[0-9]/;
-    var newValue = '';
-
-    for (var vId = 0, mId = 0; mId < mask.length;) {
-      if (mId >= value.length) {
-        break;
-      }
-      // Number expected but got a different value, store only the valid portion
-      if (mask[mId] === '0' && value[vId].match(numberPattern) === null) {
-        break;
-      }
-      // Found a literal
-      while (mask[mId].match(literalPattern) === null) {
-        if (value[vId] === mask[mId]) {
-          break;
-        }
-        newValue += mask[mId++];
-      }
-      newValue += value[vId++];
-      mId++;
-    }
-    inputName.value = newValue;
-  } catch (e2) {
-    // Здесь будет сообщение об ошибке
-  }
-}
-
-var phoneInputFeedback = document.querySelector('#phone');
-phoneInputFeedback.addEventListener('input', function (evt) {
-  maskInput(phoneInputFeedback, '+7(000)000-00-00', evt);
-});
