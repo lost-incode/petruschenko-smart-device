@@ -9,6 +9,7 @@
   padding: 0;
   display: flex;
   column-gap: 89px;
+  row-gap: 20px;
 
   @media (max-width: $tablet-width-only) {
     column-gap: 34px;

@@ -23,6 +23,10 @@
     height: 15vw;
   }
 
+  @media (max-width: ($desktop-width)) {
+    display: none;
+  }
+
   @supports (background-image: url("../img/paper-airplane@1x.webp")) {
     background-image: url("../img/paper-airplane@1x.webp");
   }
@@ -37,14 +41,7 @@
   column-gap: 30px;
   box-sizing: border-box;
 
-  // @media (max-width: ($tablet-width-only + 896px)) {
-  //   display: none;
-  // }
-
   @media (max-width: ($tablet-width-only + 896px)) {
-    // padding: 83px 66px 103px 66px;
-    // // max-width: 60vw;
-    // justify-content: flex-end;
     padding-left: 40vw;
   }
 

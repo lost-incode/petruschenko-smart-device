@@ -16,6 +16,8 @@
   display: flex;
   justify-content: space-between;
   padding-top: 33px;
+  column-gap: 60px;
+  align-items: flex-start;
 }
 
 .header__link-call {
@@ -32,6 +34,8 @@
   border: 1px solid $basic-white;
   box-sizing: border-box;
   border-radius: 5px;
+  height: max-content;
+  flex-shrink: 0;
 
   &:hover {
     opacity: 0.5;

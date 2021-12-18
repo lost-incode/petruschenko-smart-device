@@ -1,6 +1,6 @@
 .sections {
   @media (min-width: $desktop-width) {
-    width: 516px;
+    min-width: 516px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {

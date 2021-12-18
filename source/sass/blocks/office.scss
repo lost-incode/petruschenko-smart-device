@@ -1,6 +1,7 @@
 .office__phone-link {
   display: block;
   text-decoration: none;
+  width: max-content;
 
   &:hover {
     color: $basic-blue;
