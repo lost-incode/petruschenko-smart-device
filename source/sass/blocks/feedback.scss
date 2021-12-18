@@ -18,12 +18,13 @@
   background-image: url("../img/paper-airplane@1x.png");
   z-index: 1;
 
-  @supports (background-image: url("../img/paper-airplane@1x.webp")) {
-    background-image: url("../img/paper-airplane@1x.webp");
+  @media (max-width: ($tablet-width-only + 896px)) {
+    width: 27vw;
+    height: 15vw;
   }
 
-  @media (max-width: ($tablet-width-only + 896px)) {
-    display: none;
+  @supports (background-image: url("../img/paper-airplane@1x.webp")) {
+    background-image: url("../img/paper-airplane@1x.webp");
   }
 }
 
@@ -34,9 +35,17 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
+  box-sizing: border-box;
+
+  // @media (max-width: ($tablet-width-only + 896px)) {
+  //   display: none;
+  // }
 
   @media (max-width: ($tablet-width-only + 896px)) {
-    padding: 83px 66px 103px 66px;
+    // padding: 83px 66px 103px 66px;
+    // // max-width: 60vw;
+    // justify-content: flex-end;
+    padding-left: 40vw;
   }
 
   @media (max-width: $mobile-width-only) {

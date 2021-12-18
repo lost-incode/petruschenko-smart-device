@@ -1,4 +1,22 @@
 .about-company {
+  position: relative;
+}
+
+.about-company::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  top: -195px;
+  left: -145px;
+  width: 640px;
+  height: 640px;
+  background-image: url("../img/stack.svg#icon-2");
+}
+
+.about-company__wrapper {
   padding-top: 55px;
   padding-left: 317px;
   position: relative;
@@ -9,7 +27,7 @@
   }
 }
 
-.about-company::before {
+.about-company__wrapper::before {
   content: "";
   position: absolute;
   display: block;
@@ -25,6 +43,10 @@
 
   @supports (background-image: url("../img/2005-logo@1x.webp")) {
     background-image: url("../img/2005-logo@1x.webp");
+  }
+
+  @media (max-width: $desktop-width) {
+    left: -70px;
   }
 
   @media (max-width: $mobile-width-only) {

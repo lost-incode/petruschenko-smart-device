@@ -17,8 +17,12 @@
 }
 
 .page__container {
-  width: 93vw;
+  width: 74vw;
   margin: 0 auto;
+
+  @media (max-width: $desktop-width) {
+    width: 93vw;
+  }
 
   &--mobile-on {
     @media (min-width: $tablet-width) {
