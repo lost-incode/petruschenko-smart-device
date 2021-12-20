@@ -107,3 +107,25 @@
   color: $promo-bg-color;
   opacity: 0.5;
 }
+
+.footer__text--social-info {
+  position: absolute;
+  bottom: -50px;
+  left: 16%;
+  text-transform: uppercase;
+  width: max-content;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  @media (max-width: ($tablet-width-only + 896px)) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-left: 32px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 0;
+  }
+}

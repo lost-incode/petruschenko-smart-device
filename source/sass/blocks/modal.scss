@@ -26,11 +26,11 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -43%);
   z-index: 10;
   overflow-y: auto;
   display: block;
-  max-height: calc(100vh - 210px);
+  max-height: calc(100vh - 20px);
 }
 
 .modal--close {
@@ -75,6 +75,7 @@
   font-size: 28px;
   line-height: 140.62%;
   color: $basic-white;
+  margin: 0;
 }
 
 .modal__input-wrapper {
@@ -86,4 +87,6 @@
   font-size: 16px;
   line-height: 22px;
   color: $basic-white;
+  margin-top: 10px;
+  margin-bottom: 28px;
 }

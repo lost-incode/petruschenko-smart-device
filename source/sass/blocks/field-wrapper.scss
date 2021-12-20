@@ -16,6 +16,10 @@
   }
 }
 
+.field-wrapper textarea {
+  min-height: 104px;
+}
+
 .field-wrapper input::placeholder,
 .field-wrapper textarea::placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -103,7 +107,7 @@
 
 .field-submit-wrapper--modal label {
   padding-left: 48px;
-  margin-right: 85px;
+  margin-right: 5px;
   margin-top: 34px;
 }
 
