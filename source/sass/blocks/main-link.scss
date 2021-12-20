@@ -2,6 +2,31 @@
   display: flex;
   column-gap: 16px;
   align-items: center;
+
+  &--footer {
+    @media (max-width: $mobile-width-only) {
+      column-gap: 0;
+    }
+  }
+}
+
+.main-link--footer span {
+  @media (max-width: $mobile-width-only) {
+    padding-right: 10px;
+  }
+}
+
+.main-link__logo--header {
+  @media (max-width: $mobile-width-only) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.main-link__logo--footer {
+  @media (max-width: $mobile-width-only) {
+    padding-right: 12px;
+  }
 }
 
 .main-link__logo-title {

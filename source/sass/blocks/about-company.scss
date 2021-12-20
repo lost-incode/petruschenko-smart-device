@@ -9,21 +9,33 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  top: -195px;
-  left: -145px;
-  width: 640px;
-  height: 640px;
+  top: -360px;
+  left: -185px;
+  width: 740px;
+  height: 860px;
   background-image: url("../img/stack.svg#icon-2");
+
+  @media (max-width: $tablet-width-only) {
+    content: none;
+  }
 }
 
 .about-company__wrapper {
-  padding-top: 55px;
-  padding-left: 317px;
+  padding-top: 35px;
+  padding-left: 307px;
   position: relative;
-  padding-bottom: 96px;
+  padding-bottom: 111px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-left: 187px;
+    padding-top: 20px;
+    padding-bottom: 84px;
+  }
 
   @media (max-width: $mobile-width-only) {
-    padding-left: 0;
+    padding-left: 5px;
+    padding-top: 17px;
+    padding-bottom: 60px;
   }
 }
 
@@ -35,7 +47,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
-  top: 45px;
+  top: 35px;
   left: 45px;
   width: 317px;
   height: 320px;
@@ -46,7 +58,10 @@
   }
 
   @media (max-width: $desktop-width) {
-    left: -70px;
+    left: -40px;
+    top: 18px;
+    width: 260px;
+    height: 360px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -62,17 +77,47 @@
   color: $text-color;
   margin: 0;
   margin-bottom: 18px;
+
+  @media (max-width: $tablet-width-only) {
+    font-size: 32px;
+    line-height: 140.62%;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 28px;
+    line-height: 140.62%;
+    margin-bottom: 10px;
+  }
 }
 
 .about-company__description {
+  max-width: 51vw;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: $text-color;
+
+  @media (max-width: $tablet-width-only) {
+    max-width: max-content;
+    max-height: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    max-height: 170px;
+    margin-top: 18px;
+    margin-bottom: 40px;
+  }
+}
+
+.about-company__description:not(:first-child) {
+  margin-top: 20px;
 }
 
 .about-company__link {
-  margin-top: 38px;
+  margin-top: 40px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -88,6 +133,10 @@
   border-radius: 5px;
   display: block;
   width: 180px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 35px;
+  }
 
   &:hover {
     opacity: 0.5;

@@ -1,3 +1,24 @@
+.office {
+  padding-left: 20px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 40px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 29px;
+    padding-bottom: 22px;
+    padding-left: 0;
+  }
+}
+
+.office__wrapper {
+  @media (max-width: $mobile-width-only) {
+    padding-left: 10px;
+  }
+}
+
 .office__phone-link {
   display: block;
   text-decoration: none;
@@ -5,5 +26,14 @@
 
   &:hover {
     color: $basic-blue;
+  }
+}
+
+.office__address {
+  margin-top: 25px;
+  margin-bottom: 0;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 20px;
   }
 }

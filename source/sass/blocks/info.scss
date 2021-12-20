@@ -8,17 +8,42 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 
+  @media (max-width: $tablet-width-only) {
+    padding-top: 7px;
+  }
+
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
+    padding-top: 17px;
   }
 }
 
 .info__component {
   width: max-content;
+  font-size: 13px;
+  line-height: 24px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .info__component--rights {
   @media (max-width: $tablet-width-only) {
     display: none;
+  }
+}
+
+.info__component--confidentiality {
+  padding-left: 40px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-left: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 0;
+    margin-bottom: 21px;
   }
 }

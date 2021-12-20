@@ -1,4 +1,5 @@
 .feedback {
+  padding-top: 10px;
   background-color: $basic-blue;
   position: relative;
 }
@@ -7,11 +8,11 @@
   content: "";
   position: absolute;
   display: block;
-  background-color: $basic-blue;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
-  top: 150px;
+  top: 160px;
   left: 350px;
   width: 511px;
   height: 288px;
@@ -21,10 +22,17 @@
   @media (max-width: ($tablet-width-only + 896px)) {
     width: 27vw;
     height: 15vw;
+    left: 20vw;
+  }
+
+  @media (max-width: ($tablet-width-only + 896px)) {
+    width: 27vw;
+    height: 15vw;
+    left: 20vw;
   }
 
   @media (max-width: ($desktop-width)) {
-    display: none;
+    content: none;
   }
 
   @supports (background-image: url("../img/paper-airplane@1x.webp")) {
@@ -32,21 +40,98 @@
   }
 }
 
+.feedback::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: $basic-white;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 50% 50%;
+  top: 0;
+  left: 79px;
+  width: 840px;
+  height: 680px;
+  mask-image: url("../img/stack.svg#promo-svg");
+  z-index: 0;
+
+  @media (max-width: ($desktop-width)) {
+    content: none;
+  }
+}
+
 .feedback form {
-  padding-top: 96px;
-  padding-left: 625px;
-  padding-bottom: 113px;
+  position: relative;
+  padding-top: 82px;
+  padding-left: 725px;
+  padding-bottom: 115px;
+  padding-right: 125px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
   box-sizing: border-box;
 
   @media (max-width: ($tablet-width-only + 896px)) {
-    padding-left: 40vw;
+    padding-left: 38vw;
+    padding-right: 3vw;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 69px;
+    padding-left: 65px;
+    padding-right: 58px;
+    padding-bottom: 106px;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding: 33px 0 41px 0;
+    padding: 20px 0 32px 0;
+  }
+}
+
+.feedback form::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: $basic-white;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 50% 50%;
+  top: 85px;
+  right: -9vw;
+  width: 220px;
+  height: 200px;
+  opacity: 0.2;
+  mask-image: url("../img/stack.svg#icon-1");
+  z-index: 0;
+
+  @media (max-width: ($desktop-width)) {
+    content: none;
+  }
+}
+
+.feedback form::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: $basic-white;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 50% 50%;
+  transform: rotate(180deg);
+  bottom: 60px;
+  right: -18vw;
+  width: 320px;
+  height: 320px;
+  opacity: 0.2;
+  mask-image: url("../img/stack.svg#icon-1");
+  z-index: 0;
+
+  @media (max-width: ($tablet-width-only + 576px)) {
+    right: -26vw;
+  }
+
+  @media (max-width: ($desktop-width)) {
+    content: none;
   }
 }
 
@@ -58,6 +143,18 @@
   color: $basic-white;
   margin: 0;
   margin-bottom: 7px;
+
+  @media (max-width: ($tablet-width-only + 896px)) {
+    font-size: 32px;
+    line-height: 140.62%;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 28px;
+    line-height: 140.62%;
+    margin-bottom: 15px;
+  }
 }
 
 .feedback__subtitle {
@@ -68,24 +165,40 @@
   margin: 0;
   margin-bottom: 49px;
 
-  @media (min-width: $tablet-width-only) {
+  @media (min-width: $mobile-width-only) {
     width: 100%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 23px;
   }
 }
 
 .feedback__input-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
   box-sizing: border-box;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 32px;
+  }
 }
 
 .feedback__input-wrapper--input {
-  width: 47.5%;
+  width: 47%;
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: ($desktop-width + 890px)) {
+    width: 46%;
+  }
+
+  @media (max-width: ($desktop-width + 112px)) {
+    width: 45%;
+  }
+
+  @media (max-width: ($desktop-width)) {
     width: 47%;
   }
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: $mobile-width-only) {
     width: 100%;
   }
 }
@@ -99,4 +212,8 @@
   width: 100%;
   flex-grow: 2;
   min-height: 154px;
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 104px;
+  }
 }

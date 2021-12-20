@@ -2,51 +2,70 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  column-gap: 16px;
+  column-gap: 11px;
   padding: 0;
-  padding-top: 54px;
+  padding-top: 47px;
+  margin-top: 0;
 
   @media (max-width: $tablet-width-only) {
     padding: 0;
+    column-gap: 6px;
+    justify-content: flex-end;
   }
 }
 
 .social__info {
   position: absolute;
-  bottom: 0;
-  left: 25%;
+  bottom: -50px;
+  left: 16%;
   text-transform: uppercase;
   width: max-content;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
 
   @media (max-width: ($tablet-width-only + 896px)) {
     position: relative;
     left: 0;
+    bottom: 0;
+    margin-left: 32px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 0;
   }
 }
 
 .social__link {
-  width: 27px;
-  height: 27px;
+  width: 33px;
+  height: 33px;
   display: block;
   position: relative;
 
   &:hover::before {
     background-color: $basic-blue;
+    // width: 24px;
+    // height: 27px;
   }
 }
 
 .social__link::before {
   content: "";
-  width: 24px;
-  height: 27px;
+  width: 30.5px;
+  height: 33px;
   top: 0;
   left: 0;
   position: absolute;
   display: flex;
   background-color: $footer-icons-color;
   mask-repeat: no-repeat;
-  mask-size: cover;
+  mask-size: contain;
   mask-position: center;
+
+  @media (max-width: $tablet-width-only) {
+    // width: 30.5px;
+    // height: 33px;
+  }
 }
 
 .social__link--fb {

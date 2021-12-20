@@ -1,15 +1,17 @@
 .service {
   background-color: $promo-bg-color;
-  padding-top: 93px;
-  padding-bottom: 127px;
+  padding-top: 87px;
+  padding-bottom: 110px;
+  padding-left: 20px;
 
   @media (max-width: $tablet-width-only) {
-    padding-top: 53px;
-    padding-bottom: 78px;
+    padding-top: 50px;
+    padding-bottom: 58px;
+    padding-left: 0;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding-bottom: 64px;
+    padding-bottom: 40px;
   }
 }
 
@@ -20,12 +22,19 @@
   line-height: 51px;
   color: $basic-white;
   margin: 0;
-  margin-bottom: 47px;
+  margin-bottom: 53px;
 
   @media (max-width: $tablet-width-only) {
     font-weight: 400;
     font-size: 32px;
     line-height: 140.62%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 28px;
+    line-height: 140.62%;
+    padding-left: 10px;
+    margin-bottom: 45px;
   }
 }
 
@@ -42,7 +51,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    row-gap: 30px;
+    row-gap: 32px;
   }
 }
 
@@ -67,10 +76,12 @@
   @media (max-width: $tablet-width-only) {
     width: 100%;
     min-height: 256px;
+    padding-top: 43px;
+    padding-right: 500px;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding: 53px 60px 53px 44px;
+    padding: 20px 90px 53px 40px;
   }
 }
 
@@ -95,7 +106,7 @@
   display: block;
   background-color: $basic-blue;
   background-repeat: no-repeat;
-  background-size: 18px 14px;
+  background-size: 10px 7px;
   background-position: 50% 50%;
   bottom: 0;
   right: 0;

@@ -1,16 +1,41 @@
 .links {
+  padding-top: 4px;
   display: flex;
   flex-direction: column;
 
   @media (max-width: $tablet-width-only) {
+    position: relative;
     flex-grow: 1;
     flex-direction: row;
     column-gap: 15px;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 20px;
   }
 
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
+    row-gap: 10px;
+    padding-bottom: 40px;
+  }
+}
+
+.links::after {
+  @media (max-width: $tablet-width-only) {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -7vw;
+    width: 107vw;
+    height: 1px;
+    background-color: $border-color;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    content: none;
   }
 }

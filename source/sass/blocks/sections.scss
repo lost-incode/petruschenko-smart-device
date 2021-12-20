@@ -1,15 +1,18 @@
 .sections {
   @media (min-width: $desktop-width) {
-    min-width: 516px;
+    min-width: 500px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     width: max-content;
     display: block;
+    padding-top: 40px;
   }
 
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $border-color;
+    padding-top: 30px;
+    padding-bottom: 14px;
   }
 }
 
@@ -20,12 +23,20 @@
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 100px;
-  column-gap: 65px;
+  padding-bottom: 45px;
+  margin-top: 23px;
+  // column-gap: 65px;
 
   @media (max-width: $tablet-width-only) {
     flex-wrap: nowrap;
     max-height: max-content;
+    margin-bottom: 0;
+    padding-bottom: 40px;
   }
+}
+
+.sections__item {
+  max-width: 243px;
 }
 
 .sections__link {
