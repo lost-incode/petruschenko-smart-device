@@ -178,3 +178,17 @@ if (modalForm) {
     maskInput(modalPhone, MASK, evt);
   });
 }
+
+var smoothLinks = document.querySelectorAll('a[href^="#free-consultation"]');
+smoothLinks.forEach(function (smoothLink) {
+  smoothLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    var id = smoothLink.getAttribute('href');
+    var linkSelector = 'a[name="' + id.slice(1, id.length) + '"]';
+
+    document.querySelector(linkSelector).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});

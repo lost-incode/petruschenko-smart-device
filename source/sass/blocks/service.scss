@@ -45,6 +45,7 @@
   column-gap: 30px;
   padding: 0;
   row-gap: 46px;
+  width: 100%;
 
   @media (max-width: $tablet-width-only) {
     flex-direction: column;
@@ -53,6 +54,12 @@
   @media (max-width: $mobile-width-only) {
     row-gap: 32px;
   }
+}
+
+.service__item {
+  width: 31%;
+  height: 70vh;
+  flex-grow: 1;
 }
 
 .service__link {
@@ -64,8 +71,8 @@
   color: $basic-white;
   text-decoration: none;
   display: block;
-  min-height: 620px;
-  width: 370px;
+  min-height: 100%;
+  width: 100%;
   box-sizing: border-box;
   padding: 53px 160px 53px 44px;
 
@@ -91,7 +98,7 @@
   display: block;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: 50% 50%;
   z-index: 0;
 
