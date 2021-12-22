@@ -11,9 +11,14 @@
   height: 100%;
   margin: 0 auto;
   padding: 0;
-  background-color: $basic-white;
   position: relative;
   overflow-x: hidden;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-image: url("../img/promo-bg.png");
+  background-size: cover;
+  background-color: $promo-bg-color;
+  min-height: 878px;
 }
 
 .page__container {

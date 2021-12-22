@@ -13,25 +13,25 @@
 
 .promo::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../img/promo-bg.png");
-  background-size: cover;
-  background-color: $promo-bg-color;
-  min-height: 878px;
-  z-index: -1;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // width: 100%;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-image: url("../img/promo-bg.png");
+  // background-size: cover;
+  // background-color: $promo-bg-color;
+  // min-height: 878px;
+  // z-index: -1;
 
-  @media (max-width: $tablet-width-only) {
-    min-height: 686px;
-  }
+  // @media (max-width: $tablet-width-only) {
+  //   min-height: 686px;
+  // }
 
-  @media (max-width: $mobile-width-only) {
-    min-height: 646px;
-  }
+  // @media (max-width: $mobile-width-only) {
+  //   min-height: 646px;
+  // }
 }
 
 .promo__img {
