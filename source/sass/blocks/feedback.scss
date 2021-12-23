@@ -4,43 +4,70 @@
   position: relative;
 }
 
-.feedback::before {
-  content: "";
-  position: absolute;
-  display: block;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 50%;
-  top: 160px;
-  left: 350px;
-  width: 511px;
-  height: 288px;
-  background-image: url("../img/paper-airplane@1x.png");
-  z-index: 1;
+.feedback__wrapper {
+  display: grid;
+  column-gap: 114px;
+  grid-template-columns: 511px 570px;
 
-  @media (max-width: ($tablet-width-only + 896px)) {
-    width: 27vw;
-    height: 15vw;
-    left: 20vw;
-  }
-
-  @media (max-width: ($tablet-width-only + 896px)) {
-    width: 27vw;
-    height: 15vw;
-    left: 20vw;
-  }
-
-  @media (max-width: ($desktop-width)) {
-    content: none;
-  }
-
-  @supports (background-image: url("../img/paper-airplane@1x.webp")) {
-    background-image: url("../img/paper-airplane@1x.webp");
+  @media (max-width: 1485px) {
+    column-gap: 20px;
+    grid-template-columns: calc(74vw - 590px) 570px;
   }
 }
 
-.feedback::after {
+.feedback__img-wrapper {
+  display: block;
+  position: relative;
+}
+
+.feedback__img-wrapper img {
+  display: block;
+  position: relative;
+  z-index: 2;
+  top: 40px;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+// .feedback::before {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   background-color: transparent;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   background-position: 50% 50%;
+//   top: 160px;
+//   left: 350px;
+//   width: 511px;
+//   height: 288px;
+//   background-image: url("../img/paper-airplane@1x.png");
+//   z-index: 1;
+
+//   @media (max-width: ($tablet-width-only + 896px)) {
+//     width: 27vw;
+//     height: 15vw;
+//     left: 20vw;
+//   }
+
+//   @media (max-width: ($tablet-width-only + 896px)) {
+//     width: 27vw;
+//     height: 15vw;
+//     left: 20vw;
+//   }
+
+//   @media (max-width: ($desktop-width)) {
+//     content: none;
+//   }
+
+//   @supports (background-image: url("../img/paper-airplane@1x.webp")) {
+//     background-image: url("../img/paper-airplane@1x.webp");
+//   }
+// }
+
+.feedback::before {
   content: "";
   position: absolute;
   display: block;
@@ -49,11 +76,11 @@
   mask-size: contain;
   mask-position: 50% 50%;
   top: 0;
-  left: 79px;
+  // left: 79px;
   width: 840px;
   height: 680px;
   mask-image: url("../img/stack.svg#promo-svg");
-  z-index: 0;
+  // z-index: -1;
 
   @media (max-width: ($desktop-width)) {
     content: none;
@@ -63,23 +90,21 @@
 .feedback form {
   position: relative;
   padding-top: 82px;
-  padding-left: 725px;
   padding-bottom: 115px;
-  padding-right: 125px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
   box-sizing: border-box;
 
   @media (max-width: ($tablet-width-only + 896px)) {
-    padding-left: 38vw;
-    padding-right: 3vw;
+    // padding-left: 38vw;
+    // padding-right: 3vw;
   }
 
   @media (max-width: $tablet-width-only) {
     padding-top: 69px;
-    padding-left: 65px;
-    padding-right: 58px;
+    // padding-left: 65px;
+    // padding-right: 58px;
     padding-bottom: 106px;
   }
 
@@ -174,6 +199,13 @@
   }
 }
 
+.feedback__field-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  width: 100%;
+}
+
 .feedback__input-wrapper {
   margin-bottom: 45px;
   box-sizing: border-box;
@@ -184,23 +216,23 @@
 }
 
 .feedback__input-wrapper--input {
-  width: 47%;
+  width: 100%;
 
-  @media (max-width: ($desktop-width + 890px)) {
-    width: 46%;
-  }
+  // @media (max-width: ($desktop-width + 890px)) {
+  //   width: 46%;
+  // }
 
-  @media (max-width: ($desktop-width + 112px)) {
-    width: 45%;
-  }
+  // @media (max-width: ($desktop-width + 112px)) {
+  //   width: 45%;
+  // }
 
-  @media (max-width: ($desktop-width)) {
-    width: 47%;
-  }
+  // @media (max-width: ($desktop-width)) {
+  //   width: 47%;
+  // }
 
-  @media (max-width: $mobile-width-only) {
-    width: 100%;
-  }
+  // @media (max-width: $mobile-width-only) {
+  //   width: 100%;
+  // }
 }
 
 .feedback__input-wrapper--textarea {
@@ -211,7 +243,8 @@
   display: block;
   width: 100%;
   flex-grow: 2;
-  min-height: 154px;
+  height: 154px;
+  box-sizing: border-box;
 
   @media (max-width: $mobile-width-only) {
     min-height: 104px;

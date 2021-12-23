@@ -19,6 +19,11 @@
   column-gap: 140px;
   flex-wrap: wrap;
 
+  @media (max-width: 1920px) {
+    justify-content: center;
+    column-gap: 30px;
+  }
+
   @media (max-width: $tablet-width-only) {
     column-gap: 20px;
   }
@@ -31,6 +36,10 @@
 .footer__links {
   padding-right: 80px;
   width: min-content;
+
+  @media (max-width: 1485px) {
+    padding-right: 0;
+  }
 
   @media (max-width: $tablet-width-only) {
     padding-right: 0;

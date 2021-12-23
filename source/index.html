@@ -136,30 +136,39 @@
     <a name="free-consultation"></a>
     <section class="feedback">
       <div class="page__container">
-        <form>
-          <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
-          <p class="feedback__subtitle">Мы проконсультируем Вас бесплатно</p>
-          <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--input">
-            <label for="name" class="visually-hidden">Введите свое имя</label>
-            <input type="text" id="name" name="name" placeholder="Имя" pattern="[a-zA-ZА-Яа-я_\s_\-]+" required>
+        <div class="feedback__wrapper">
+          <div class="feedback__img-wrapper">
+            <picture>
+              <img src="img/paper-airplane@1x.png" alt="Изображение бумажного самолетика">
+            </picture>
           </div>
-          <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--input">
-            <label for="phone" class="visually-hidden">Введите свой телефон</label>
-            <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[+]*[\d()-]{15}" required>
-          </div>
-          <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--textarea">
-            <label for="question" class="visually-hidden">Напишите текст вопроса в этом поле</label>
-            <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
-          </div>
-
-          <div class="field-submit-wrapper field-submit-wrapper--feedback">
-            <button type="submit" class="field-submit-button field-submit-button--feedback">Задать вопрос</button>
-            <div class="field-checkbox-wrapper">
-              <input type="checkbox" class="visually-hidden" name="personal-data" id="personal-data" required>
-              <label for="personal-data">Я согласен на обработку  персональных данных</label>
+          <form>
+            <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+            <p class="feedback__subtitle">Мы проконсультируем Вас бесплатно</p>
+            <div class="feedback__field-wrapper">
+              <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--input">
+                <label for="name" class="visually-hidden">Введите свое имя</label>
+                <input type="text" id="name" name="name" placeholder="Имя" pattern="[a-zA-ZА-Яа-я_\s_\-]+" required>
+              </div>
+              <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--input">
+                <label for="phone" class="visually-hidden">Введите свой телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[+]*[\d()-]{15}" required>
+              </div>
             </div>
-          </div>
-        </form>
+            <div class="field-wrapper feedback__input-wrapper feedback__input-wrapper--textarea">
+              <label for="question" class="visually-hidden">Напишите текст вопроса в этом поле</label>
+              <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
+            </div>
+
+            <div class="field-submit-wrapper field-submit-wrapper--feedback">
+              <button type="submit" class="field-submit-button field-submit-button--feedback">Задать вопрос</button>
+              <div class="field-checkbox-wrapper">
+                <input type="checkbox" class="visually-hidden" name="personal-data" id="personal-data" required>
+                <label for="personal-data">Я согласен на обработку  персональных данных</label>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -242,23 +251,23 @@
               <li class="sections__item">
                 <a href="#" class="footer__text sections__link">О компании</a>
               </li>
+              <li class="sections__item sections__item--last">
+                <a href="#" class="footer__text sections__link">Комплектующие</a>
+              </li>
               <li class="sections__item">
                 <a href="#" class="footer__text sections__link">Продукты</a>
+              </li>
+              <li class="sections__item sections__item--last">
+                <a href="#" class="footer__text sections__link">Доставка</a>
               </li>
               <li class="sections__item">
                 <a href="#" class="footer__text sections__link">Производство печатных плат</a>
               </li>
+              <li class="sections__item sections__item--last">
+                <a href="#" class="footer__text sections__link">Контакты</a>
+              </li>
               <li class="sections__item">
                 <a href="#" class="footer__text sections__link">Монтаж печатных плат</a>
-              </li>
-              <li class="sections__item">
-                <a href="#" class="footer__text sections__link">Комплектующие</a>
-              </li>
-              <li class="sections__item">
-                <a href="#" class="footer__text sections__link">Доставка</a>
-              </li>
-              <li class="sections__item">
-                <a href="#" class="footer__text sections__link">Контакты</a>
               </li>
             </ul>
           </div>

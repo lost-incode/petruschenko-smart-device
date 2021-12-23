@@ -60,10 +60,9 @@
   width: 370px;
   height: 620px;
 
-  @media (max-width: 1919px) {
-    width: 31%;
+  @media (max-width: 1300px) {
+    width: 26%;
     height: 70vh;
-    flex-grow: 1;
   }
 
   @media (max-width: $tablet-width-only) {
