@@ -153,10 +153,19 @@ if (modalForm) {
     body.classList.remove('overflow-hidden');
   };
 
+  document.addEventListener('focus', function (evt) {
+    if (modalWindow.classList.contains('modal--open') && !modalWindow.contains(evt.target)) {
+      evt.stopPropagation();
+      modalWindow.focus();
+    }
+  }, true);
+
   var openModal = function () {
     modalWindow.classList.add('modal--open');
     modalName.focus();
     body.classList.add('overflow-hidden');
+    modalWindow.setAttribute('tabindex', '0');
+    modalWindow.focus();
   };
 
   document.addEventListener('keyup', function (evt) {
