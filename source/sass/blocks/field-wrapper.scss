@@ -118,6 +118,10 @@
   position: relative;
 }
 
+.field-checkbox-wrapper input:focus + label {
+  outline: 2px solid $basic-black;
+}
+
 .field-checkbox-wrapper input + label::before {
   content: "";
   display: block;
