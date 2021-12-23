@@ -48,7 +48,8 @@
 
   &--desktop {
     @media (min-width: $desktop-width) {
-      width: 62vw;
+      // width: 62vw;
+      width: 1170px;
     }
   }
 }
