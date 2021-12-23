@@ -20,7 +20,7 @@ if (accordionBlocks) {
 
     accordionContentBlocks[Array.from(accordionButtons).indexOf(btn)].classList.toggle('active');
     btn.classList.toggle('footer__mobile-button--hide');
-  }
+  };
 
   // При загрузке js, скрывает вкладки, которые открыты по умолчанию без js
   // и показываем кнопки
@@ -31,12 +31,12 @@ if (accordionBlocks) {
   }
 
   accordionTitleWrappers.forEach(function (wrapper) {
-    var button = wrapper.querySelector('.accordion-block__button')
+    var button = wrapper.querySelector('.accordion-block__button');
     wrapper.addEventListener('click', function (evt) {
       evt.preventDefault();
       toggleAccordion(button);
 
-      button.addEventListener('click', function (evt) {
+      button.addEventListener('click', function () {
         evt.preventDefault();
         toggleAccordion(button);
       });
@@ -151,13 +151,13 @@ if (modalForm) {
   var closeModal = function () {
     modalWindow.classList.remove('modal--open');
     body.classList.remove('overflow-hidden');
-  }
+  };
 
   var openModal = function () {
     modalWindow.classList.add('modal--open');
     modalName.focus();
     body.classList.add('overflow-hidden');
-  }
+  };
 
   document.addEventListener('keyup', function (evt) {
     if (evt.defaultPrevented) {
