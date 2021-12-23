@@ -18,13 +18,17 @@
   background-image: url("../img/promo-bg.png");
   background-size: cover;
   background-color: $promo-bg-color;
-  min-height: 878px;
+  // min-height: 878px;
   // scroll-behavior: smooth;
 }
 
 .page__container {
-  width: 74vw;
+  width: 1486px;
   margin: 0 auto;
+
+  @media (max-width: 1486px) {
+    width: 74vw;
+  }
 
   @media (max-width: $desktop-width) {
     width: 93vw;

@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   column-gap: 15px;
+  width: max-content;
 
   &:hover {
     opacity: 0.5;

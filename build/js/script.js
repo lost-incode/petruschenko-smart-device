@@ -53,7 +53,7 @@ function maskInput(inputName, mask, evt) {
       // Здесь будет сообщение об ошибке
     }
 
-    var literalPattern = /[0\*]/; 
+    var literalPattern = /[0\*]/;
     var numberPattern = /[0-9]/;
     var newValue = '';
 
@@ -190,9 +190,5 @@ smoothLinks.forEach(function (smoothLink) {
       behavior: 'smooth',
       block: 'start'
     });
-
-    navMain.classList.toggle('main-nav--closed');
-    navMain.classList.toggle('main-nav--opened');
-    body.classList.toggle('overflow-hidden');
   });
 });
