@@ -2,10 +2,25 @@
 
 var body = document.querySelector('.page__body');
 var accordionBlocks = document.querySelectorAll('.accordion-block');
+var accordionTitleWrappers = document.querySelectorAll('.footer__title-wrapper');
 
 if (accordionBlocks) {
   var accordionButtons = document.querySelectorAll('.accordion-block__button');
   var accordionContentBlocks = document.querySelectorAll('.accordion-block__content');
+
+  var toggleAccordion = function (btn) {
+    var currentIndex = Array.from(accordionButtons).indexOf(btn);
+    // находим все активные элементы (уже развернутые вкладки аккордеона)
+    for (var j = 0; j < accordionContentBlocks.length; j++) {
+      if (j !== currentIndex && accordionContentBlocks[j].classList.contains('active')) {
+        accordionContentBlocks[j].classList.remove('active');
+        accordionButtons[j].classList.remove('footer__mobile-button--hide');
+      }
+    }
+
+    accordionContentBlocks[Array.from(accordionButtons).indexOf(btn)].classList.toggle('active');
+    btn.classList.toggle('footer__mobile-button--hide');
+  }
 
   // При загрузке js, скрывает вкладки, которые открыты по умолчанию без js
   // и показываем кнопки
@@ -15,22 +30,16 @@ if (accordionBlocks) {
     accordionContentBlocks[i].classList.remove('active');
   }
 
-  accordionButtons.forEach(function (button) {
-    button.addEventListener('click', function (evt) {
+  accordionTitleWrappers.forEach(function (wrapper) {
+    var button = wrapper.querySelector('.accordion-block__button')
+    wrapper.addEventListener('click', function (evt) {
       evt.preventDefault();
-      var currentIndex = Array.from(accordionButtons).indexOf(button);
-      // находим все активные элементы (уже развернутые вкладки аккордеона)
-      for (var j = 0; j < accordionContentBlocks.length; j++) {
-        if (j !== currentIndex && accordionContentBlocks[j].classList.contains('active')) {
-          accordionContentBlocks[j].classList.remove('active');
-          accordionButtons[j].classList.remove('footer__mobile-button--hide');
-          accordionButtons[j].classList.add('footer__mobile-button--show');
-        }
-      }
+      toggleAccordion(button);
 
-      accordionContentBlocks[Array.from(accordionButtons).indexOf(button)].classList.toggle('active');
-      button.classList.toggle('footer__mobile-button--show');
-      button.classList.toggle('footer__mobile-button--hide');
+      button.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        toggleAccordion(button);
+      });
     });
   });
 }
@@ -139,6 +148,17 @@ if (modalForm) {
   var modalClose = modalWindow.querySelector('.modal__button-close');
   var modalCloseWindow = modalWindow.querySelector('.modal__button-close-window');
 
+  var closeModal = function () {
+    modalWindow.classList.remove('modal--open');
+    body.classList.remove('overflow-hidden');
+  }
+
+  var openModal = function () {
+    modalWindow.classList.add('modal--open');
+    modalName.focus();
+    body.classList.add('overflow-hidden');
+  }
+
   document.addEventListener('keyup', function (evt) {
     if (evt.defaultPrevented) {
       return;
@@ -147,31 +167,22 @@ if (modalForm) {
     var key = evt.key;
 
     if (key === 'Escape' || key === 'Esc' || key === 27) {
-      modalWindow.classList.remove('modal--open');
-      modalWindow.classList.add('modal--close');
-      body.classList.remove('overflow-hidden');
+      closeModal();
     }
   });
 
   modalClose.addEventListener('click', function (evt) {
     evt.preventDefault();
-    modalWindow.classList.remove('modal--open');
-    modalWindow.classList.add('modal--close');
-    body.classList.remove('overflow-hidden');
+    closeModal();
   });
 
   modalCloseWindow.addEventListener('click', function () {
-    modalWindow.classList.remove('modal--open');
-    modalWindow.classList.add('modal--close');
-    body.classList.remove('overflow-hidden');
+    closeModal();
   });
 
   modalLink.addEventListener('click', function (evt) {
     evt.preventDefault();
-    modalWindow.classList.remove('modal--close');
-    modalWindow.classList.add('modal--open');
-    modalName.focus();
-    body.classList.add('overflow-hidden');
+    openModal();
   });
 
   modalPhone.addEventListener('input', function (evt) {
