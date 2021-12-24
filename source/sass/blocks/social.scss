@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  column-gap: 11px;
+  column-gap: 18px;
   padding: 0;
   padding-top: 47px;
   margin-top: 0;
@@ -12,6 +12,11 @@
     column-gap: 6px;
     justify-content: flex-end;
   }
+
+  @media (max-width: $mobile-width-only) {
+    row-gap: 13px;
+    margin-top: 5px;
+  }
 }
 
 .social__link {
@@ -19,16 +24,18 @@
   height: 27px;
   display: block;
   position: relative;
-  // border-radius: 50%;
 
   @media (max-width: $tablet-width-only) {
     width: 24px;
   }
 
+  @media (max-width: $mobile-width-only) {
+    width: 30.5px;
+    height: 34.5px;
+  }
+
   &:hover::before {
     background-color: $basic-blue;
-    // width: 24px;
-    // height: 27px;
   }
 }
 
@@ -44,11 +51,6 @@
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
-
-  @media (max-width: $tablet-width-only) {
-    // width: 30.5px;
-    // height: 33px;
-  }
 }
 
 .social__link:focus::before {

@@ -2,11 +2,11 @@
   background-color: $promo-bg-color;
   padding-top: 87px;
   padding-bottom: 110px;
-  padding-left: 20px;
+  // padding-left: 20px;
 
   @media (max-width: $tablet-width-only) {
     padding-top: 50px;
-    padding-bottom: 58px;
+    padding-bottom: 64px;
     padding-left: 0;
   }
 
@@ -28,6 +28,7 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 140.62%;
+    margin-bottom: 47px;
   }
 
   @media (max-width: $mobile-width-only) {

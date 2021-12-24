@@ -16,16 +16,17 @@
 .footer__wrapper {
   position: relative;
   display: flex;
-  column-gap: 140px;
   flex-wrap: wrap;
+  justify-content: space-between;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1919px) {
     justify-content: center;
     column-gap: 30px;
   }
 
   @media (max-width: $tablet-width-only) {
     column-gap: 20px;
+    justify-content: space-between;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -34,7 +35,6 @@
 }
 
 .footer__links {
-  padding-right: 80px;
   width: min-content;
 
   @media (max-width: 1485px) {
@@ -55,10 +55,15 @@
 .footer__title-wrapper {
   padding-left: 5px;
 
+  &--office {
+    padding-left: 0;
+  }
+
   @media (max-width: $mobile-width-only) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
   }
 }
 

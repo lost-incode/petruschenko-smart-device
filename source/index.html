@@ -18,7 +18,7 @@
       <div class="header__wrapper">
         <a class="header__link header__link--nav main-link">
           <img src="img/logo.svg" alt="Логотип сайта" class="main-link__logo main-link__logo--header" width="52" height="52">
-          <img src="img/logo-text.svg" alt="Текстовый логотип сайта" width="133" height="40">
+          <img src="img/logo-text.svg" alt="Текстовый логотип сайта" class="main-link__logo-text" width="133" height="40">
           <!-- <span>
             <span class="main-link__logo-title main-link__logo-title--white">Smart Device</span>
             <span class="main-link__logo-subtitle">умные технологии</span>
@@ -47,6 +47,38 @@
   </header>
 
   <main class="page__main">
+    <div class="modal modal--close">
+      <!-- Кнопка для закрытия по нажатию на фон за модалкой -->
+      <button class="modal__button-close-window"><span class="visually-hidden">Закрыть модальное окно</span></button>
+      <div class="modal__wrapper modal__wrapper--window">
+        <form>
+          <button class="modal__button-close"><span class="visually-hidden">Закрыть модальное окно</span></button>
+          <h2 class="modal__title">Закажите звонок</h2>
+          <p class="modal__subtitle">Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
+          <div class="modal__input-wrapper field-wrapper">
+            <label for="call-name" class="visually-hidden">Введите свое имя</label>
+            <input type="text" id="call-name" name="call-name" placeholder="Имя" pattern="[a-zA-ZА-Яа-я_\s_\-]+" required autofocus>
+          </div>
+          <div class="modal__input-wrapper field-wrapper">
+            <label for="call-phone" class="visually-hidden">Введите свой телефон</label>
+            <input type="tel" id="call-phone" name="call-phone" placeholder="Телефон" pattern="[+]*[\d()-]{15}" required>
+          </div>
+          <div class="modal__input-wrapper modal__input-wrapper--textarea field-wrapper">
+            <label for="call-question" class="visually-hidden">Напишите текст вопроса в этом поле</label>
+            <textarea id="call-question" name="call-question" placeholder="Ваш вопрос"></textarea>
+          </div>
+
+          <div class="field-submit-wrapper field-submit-wrapper--modal">
+            <button type="submit" class="field-submit-button field-submit-button--modal">Отправить</button>
+            <div class="field-checkbox-wrapper">
+              <input type="checkbox" class="visually-hidden" name="call-personal-data" id="call-personal-data" required>
+              <label for="call-personal-data">Я согласен на обработку&nbsp;персональных данных</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <div class="promo">
       <div class="page__container">
         <div class="promo__wrapper">
@@ -76,13 +108,13 @@
           <div class="advantage__item advantage__item--stopwatch">
             <dt class="advantage__title">Оперативные сроки</dt>
             <dd class="advantage__subtitle">
-              Усовершенствованная логистическая система позволяет нам просчитывать&nbsp;стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
+              Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
             </dd>
           </div>
           <div class="advantage__item advantage__item--hired">
             <dt class="advantage__title">Крупные поставщики</dt>
             <dd class="advantage__subtitle">
-              Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+              Нашими поставщиками являются такие крупные мировые компании как: OSRAM,&nbsp;CREE,&nbsp;HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
             </dd>
           </div>
           <div class="advantage__item advantage__item--detective">
@@ -171,38 +203,6 @@
         </div>
       </div>
     </section>
-
-    <div class="modal modal--close">
-      <!-- Кнопка для закрытия по нажатию на фон за модалкой -->
-      <button class="modal__button-close-window"><span class="visually-hidden">Закрыть модальное окно</span></button>
-      <div class="modal__wrapper modal__wrapper--window">
-        <form>
-          <button class="modal__button-close"><span class="visually-hidden">Закрыть модальное окно</span></button>
-          <h2 class="modal__title">Закажите звонок</h2>
-          <p class="modal__subtitle">Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
-          <div class="modal__input-wrapper field-wrapper">
-            <label for="call-name" class="visually-hidden">Введите свое имя</label>
-            <input type="text" id="call-name" name="call-name" placeholder="Имя" pattern="[a-zA-ZА-Яа-я_\s_\-]+" required autofocus>
-          </div>
-          <div class="modal__input-wrapper field-wrapper">
-            <label for="call-phone" class="visually-hidden">Введите свой телефон</label>
-            <input type="tel" id="call-phone" name="call-phone" placeholder="Телефон" pattern="[+]*[\d()-]{15}" required>
-          </div>
-          <div class="modal__input-wrapper field-wrapper">
-            <label for="call-question" class="visually-hidden">Напишите текст вопроса в этом поле</label>
-            <textarea id="call-question" name="call-question" placeholder="Ваш вопрос"></textarea>
-          </div>
-
-          <div class="field-submit-wrapper field-submit-wrapper--modal">
-            <button type="submit" class="field-submit-button field-submit-button--modal">Отправить</button>
-            <div class="field-checkbox-wrapper">
-              <input type="checkbox" class="visually-hidden" name="call-personal-data" id="call-personal-data" required>
-              <label for="call-personal-data">Я согласен на обработку&nbsp;персональных данных</label>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
   </main>
 
   <footer class="footer">
@@ -275,7 +275,7 @@
 
         <div class="office accordion-block">
           <div class="page__container page__container--mobile-on">
-            <div class="footer__title-wrapper">
+            <div class="footer__title-wrapper footer__title-wrapper--office">
               <h2 class="footer__title">Наш офис</h2>
               <button class="footer__mobile-button visually-hidden accordion-block__button">
                 <span class="visually-hidden">Развернуть список</span>

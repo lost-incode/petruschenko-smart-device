@@ -60,8 +60,13 @@
 .field-submit-button--feedback {
   width: 70%;
 
+  @media (max-width: $tablet-width-only) {
+    padding: 16px 18px 8px 18px;
+  }
+
   @media (max-width: $mobile-width-only) {
     width: 100%;
+    padding: 14px 18px 14px;
   }
 }
 
@@ -96,10 +101,6 @@
     flex-direction: column;
     row-gap: 30px;
     margin-top: 10px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    row-gap: 35px;
   }
 }
 

@@ -1,5 +1,4 @@
 .sections {
-  // max-width: 500px;
   max-width: max-content;
 
   @media (max-width: 1485px) {
@@ -23,19 +22,15 @@
 
 .sections__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr max-content;
   padding: 0;
   list-style: none;
   max-width: 500px;
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // height: 100px;
   padding-bottom: 45px;
   margin-top: 23px;
-  column-gap: 65px;
+  column-gap: 76px;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1919px) {
     column-gap: 15px;
   }
 

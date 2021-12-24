@@ -156,7 +156,7 @@ if (modalForm) {
   document.addEventListener('focus', function (evt) {
     if (modalWindow.classList.contains('modal--open') && !modalWindow.contains(evt.target)) {
       evt.stopPropagation();
-      modalWindow.focus();
+      modalWindow.focus({preventScroll: true});
     }
   }, true);
 
