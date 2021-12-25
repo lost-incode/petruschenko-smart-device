@@ -18,6 +18,7 @@
   background-image: url("../img/promo-bg.png");
   background-size: cover;
   background-color: $promo-bg-color;
+  scroll-behavior: smooth;
 }
 
 .page__container {
