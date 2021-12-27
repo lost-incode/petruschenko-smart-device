@@ -134,7 +134,11 @@
   line-height: 24px;
   letter-spacing: 0.04em;
 
-  @media (max-width: ($tablet-width-only + 896px)) {
+  @media (max-width: 1270px) {
+    left: 20%;
+  }
+
+  @media (max-width: $tablet-width-only) {
     position: relative;
     left: 0;
     bottom: 0;
