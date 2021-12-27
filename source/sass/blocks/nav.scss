@@ -22,7 +22,13 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    column-gap: 27px;
+    column-gap: 0;
+  }
+}
+
+.nav__item:not(:last-child) {
+  @media (max-width: $mobile-width-only) {
+    margin-right: 27px;
   }
 }
 

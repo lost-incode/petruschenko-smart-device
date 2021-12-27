@@ -52,7 +52,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    row-gap: 32px;
+    row-gap: 0;
   }
 }
 
@@ -68,6 +68,12 @@
   @media (max-width: $tablet-width-only) {
     width: 100%;
     height: 256px;
+  }
+}
+
+.service__item:not(:last-child) {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 32px;
   }
 }
 

@@ -81,7 +81,7 @@
 
   @media (max-width: $mobile-width-only) {
     display: flex;
-    row-gap: 20px;
+    row-gap: 0;
   }
 }
 
@@ -113,6 +113,12 @@
     padding-bottom: 22px;
     width: 100%;
     box-sizing: border-box;
+  }
+}
+
+.advantage__item:not(:last-child) {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 20px;
   }
 }
 

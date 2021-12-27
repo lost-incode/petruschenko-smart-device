@@ -55,6 +55,10 @@
   &:active {
     opacity: 0.4;
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 30px;
+  }
 }
 
 .field-submit-button--feedback {
@@ -99,7 +103,6 @@
 
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
-    row-gap: 30px;
     margin-top: 10px;
   }
 }
