@@ -162,10 +162,9 @@ if (modalForm) {
 
   var openModal = function () {
     modalWindow.classList.add('modal--open');
-    modalName.focus();
     body.classList.add('overflow-hidden');
     modalWindow.setAttribute('tabindex', '0');
-    modalWindow.focus();
+    modalName.focus();
   };
 
   document.addEventListener('keyup', function (evt) {
