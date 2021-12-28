@@ -2,14 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  column-gap: 18px;
   padding: 0;
   padding-top: 47px;
   margin-top: 0;
 
   @media (max-width: $tablet-width-only) {
     padding: 0;
-    column-gap: 6px;
     justify-content: flex-end;
   }
 
@@ -36,6 +34,14 @@
 
   &:hover::before {
     background-color: $basic-blue;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 18px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-right: 6px;
   }
 }
 
