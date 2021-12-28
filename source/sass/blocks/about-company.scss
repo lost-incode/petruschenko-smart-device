@@ -27,6 +27,10 @@
   position: relative;
   padding-bottom: 111px;
 
+  @media (max-width: 1485px) {
+    padding-left: 177px;
+  }
+
   @media (max-width: $tablet-width-only) {
     padding-left: 187px;
     padding-top: 20px;
@@ -63,6 +67,14 @@
     top: 18px;
     width: 260px;
     height: 360px;
+  }
+
+  @media (max-width: 1485px) {
+    left: -80px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    left: -40px;
   }
 
   @media (max-width: $mobile-width-only) {
