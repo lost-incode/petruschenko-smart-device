@@ -34,11 +34,11 @@
     column-gap: 15px;
   }
 
-  @media (max-width: 1485px) {
-    max-height: none;
-  }
+  // @media (max-width: 1485px) {
+  //   max-height: none;
+  // }
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: 1055px) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@
 }
 
 .sections__item--last {
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: 1055px) {
     order: 7;
   }
 }
